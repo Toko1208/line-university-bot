@@ -25,8 +25,8 @@ app.post('/webhook', async (req, res) => {
       const link = universityLinks[keyword];
 
       const replyText = link
-        ? `📎 ${keyword}の募集要項はこちら：\n${link}`
-        : `申し訳ありません。「${keyword}」の情報が登録されていません。`;
+  ? `📎 ${keyword} 募集要項リンク：${link}`
+  : `「${keyword}」の情報は登録されていません。`;
 
       await client.replyMessage(event.replyToken, {
         type: 'text',
